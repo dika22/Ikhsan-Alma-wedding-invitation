@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  
+  --color-primary: #D4AF37; /* Gold / Rose Gold */
+  --color-secondary: #F3E5F5; /* Soft pink / cream */
+  --color-accent: #7B1FA2; /* Deep burgundy / purple */
+  --color-dark: #3E2723; /* Dark text */
+  --color-light: #FAFAFA; /* Off white background */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans bg-light text-dark antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
