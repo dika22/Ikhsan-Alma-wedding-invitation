@@ -60,7 +60,7 @@ function App() {
 
         <div className="relative z-10 text-center px-6 w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-1000 flex flex-col items-center">
           <p className="text-gray-600 tracking-[0.3em] uppercase text-xs md:text-sm mb-6 font-semibold">
-            Wedding Invitation
+            Undangan Pernikahan
           </p>
           
           <h1 className="font-script text-6xl md:text-7xl text-dark mb-8 leading-tight">
@@ -71,38 +71,38 @@ function App() {
           <div className="flex gap-3 mb-6">
             <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
               <p className="text-xl font-bold text-dark">{timeLeft.hari}</p>
-              <p className="text-xs text-gray-600 mt-1">Days</p>
+              <p className="text-xs text-gray-600 mt-1">Hari</p>
             </div>
             <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
               <p className="text-xl font-bold text-dark">{timeLeft.jam}</p>
-              <p className="text-xs text-gray-600 mt-1">Hours</p>
+              <p className="text-xs text-gray-600 mt-1">Jam</p>
             </div>
             <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
               <p className="text-xl font-bold text-dark">{timeLeft.menit}</p>
-              <p className="text-xs text-gray-600 mt-1">Minutes</p>
+              <p className="text-xs text-gray-600 mt-1">Menit</p>
             </div>
             <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
               <p className="text-xl font-bold text-dark">{timeLeft.detik}</p>
-              <p className="text-xs text-gray-600 mt-1">Seconds</p>
+              <p className="text-xs text-gray-600 mt-1">Detik</p>
             </div>
           </div>
 
           <p className="text-dark tracking-widest uppercase text-xs md:text-sm mb-8 font-bold border-b border-gray-300 pb-2">
-            SATURDAY, MAY 30, 2026
+            SABTU, 30 MEI 2026
           </p>
 
           {/* Recipient Box */}
           <div className="bg-white/60 p-6 rounded-lg mb-8 w-full backdrop-blur-sm border border-primary/30 shadow-sm">
-            <p className="text-gray-700 font-serif mb-2 text-sm">Dear Family & Friends,</p>
-            <p className="font-bold text-xl text-dark mb-1 font-serif">Our Honored Guest</p>
-            <p className="text-gray-600 text-sm">You are cordially invited</p>
+            <p className="text-gray-700 font-serif mb-2 text-sm">Kepada Yth. Bapak/Ibu/Sdr/i</p>
+            <p className="font-bold text-xl text-dark mb-1 font-serif">Tamu Undangan</p>
+            <p className="text-gray-600 text-sm">di Tempat</p>
           </div>
 
           <button 
             onClick={() => setIsOpened(true)}
             className="px-8 py-3 bg-primary text-white rounded-full font-medium tracking-widest text-sm hover:bg-primary/85 transition-all shadow-md uppercase hover:shadow-lg hover:scale-105"
           >
-            Open Invitation
+            Buka Undangan
           </button>
         </div>
       </div>

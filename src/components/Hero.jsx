@@ -17,13 +17,13 @@ export default function Hero() {
         }`}
       >
         <p className="text-accent tracking-[0.3em] uppercase text-sm mb-6 font-semibold">
-          The Wedding Celebration of
+          Pernikahan
         </p>
         <h1 className="font-script text-6xl md:text-8xl text-dark mb-4 drop-shadow-sm">
           Ikhsan <span className="text-primary text-5xl md:text-7xl">&amp;</span> Alma
         </h1>
         <p className="text-gray-600 mt-6 text-lg md:text-xl font-serif italic">
-          "Two souls, one heart."
+          "Dua jiwa, satu hati."
         </p>
         <div className="mt-12">
           <p className="text-dark font-semibold tracking-widest uppercase border-y border-primary/30 py-4 inline-block px-8">

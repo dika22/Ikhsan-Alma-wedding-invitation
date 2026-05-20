@@ -10,7 +10,7 @@ export default function Story() {
       <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent" />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">Our Love Story</h2>
+          <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">Kisah Cinta Kami</h2>
           <div className="w-24 h-[1px] bg-accent mx-auto"></div>
         </div>
 

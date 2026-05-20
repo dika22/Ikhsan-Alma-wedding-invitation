@@ -76,14 +76,14 @@ export default function RSVP() {
           }`}
         >
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-script text-primary mb-4">RSVP & Gift</h2>
+            <h2 className="text-4xl font-script text-primary mb-4">Konfirmasi Kehadiran &amp; Kado</h2>
             <p className="text-gray-600 font-serif">Kehadiran dan doa restu Anda adalah kado terindah bagi kami.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Best Wishes Form */}
             <div>
-              <h3 className="text-2xl font-serif text-dark mb-2 border-b border-primary/20 pb-2">Best Wishes</h3>
+              <h3 className="text-2xl font-serif text-dark mb-2 border-b border-primary/20 pb-2">Doa &amp; Ucapan</h3>
               <p className="text-gray-600 mb-6 text-sm">Kirimkan ucapan & do'a restu.</p>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
@@ -117,7 +117,7 @@ export default function RSVP() {
 
             {/* Digital Gift */}
             <div>
-              <h3 className="text-2xl font-serif text-dark mb-6 border-b border-primary/20 pb-2">Wedding Gift</h3>
+              <h3 className="text-2xl font-serif text-dark mb-6 border-b border-primary/20 pb-2">Kado Digital</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih dapat melalui virtual account atau e-wallet di bawah ini:
               </p>
@@ -134,7 +134,7 @@ export default function RSVP() {
                 <div className="mt-6 space-y-4 animate-in fade-in slide-in-from-top-4 duration-500">
                   <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
                     <p className="font-bold text-gray-800 text-lg">BCA</p>
-                    <p className="text-2xl tracking-widest text-primary my-2 font-mono">1234 5678 90</p>
+                    <p className="text-2xl tracking-widest text-primary my-2 font-mono">7105232659</p>
                     <p className="text-sm text-gray-500">a.n Ikhsan Sandi Putra</p>
                   </div>
                    <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
