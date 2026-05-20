@@ -1,19 +1,20 @@
 import React from 'react';
 import { useScrollFade } from '../hooks/useScrollFade';
 
-export default function Hero() {
-  const [ref, isVisible] = useScrollFade();
-
+export default function Hero({ isOpened }) {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-secondary">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-40 bg-[url('/main-photo.jpg')] bg-cover bg-center" />
+      {/* Background decoration with dreamy slow zoom-in & fade-in */}
+      <div 
+        className={`absolute inset-0 bg-[url('/main-photo.jpg')] bg-cover bg-center transition-all duration-[2500ms] ease-out transform ${
+          isOpened ? 'scale-100 opacity-40' : 'scale-110 opacity-0'
+        }`} 
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary/90" />
 
       <div 
-        ref={ref}
-        className={`relative z-10 text-center px-4 transition-all duration-1000 ease-out transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`relative z-10 text-center px-4 transition-all duration-[1500ms] delay-300 ease-out transform ${
+          isOpened ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
         }`}
       >
         <p className="text-accent tracking-[0.3em] uppercase text-sm mb-6 font-semibold">

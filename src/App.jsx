@@ -6,6 +6,7 @@ import Story from './components/Story';
 import EventDetails from './components/EventDetails';
 import RSVP from './components/RSVP';
 import MusicPlayer from './components/MusicPlayer';
+import FallingPetals from './components/FallingPetals';
 
 function App() {
   const [isOpened, setIsOpened] = useState(false);
@@ -107,7 +108,8 @@ function App() {
         </div>
       </div>
 
-      <Hero />
+      {isOpened && <FallingPetals />}
+      <Hero isOpened={isOpened} />
       <Verse />
       <Profile />
       <Story />
