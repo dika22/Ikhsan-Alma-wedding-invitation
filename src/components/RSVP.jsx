@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Gift, Send } from 'lucide-react';
 import { useScrollFade } from '../hooks/useScrollFade';
+import { db } from '../lib/firebase';
+import { collection, addDoc, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+
+const wishesRef = collection(db, 'wishes');
 
 export default function RSVP() {
   const [ref, isVisible] = useScrollFade();
@@ -9,13 +13,38 @@ export default function RSVP() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (e) => {
+  // Listen to wishes in real-time
+  useEffect(() => {
+    const q = query(wishesRef, orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const wishList = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setMessages(wishList);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (name.trim() && message.trim()) {
-      setMessages([{ name, message, date: new Date().toLocaleDateString() }, ...messages]);
-      setName('');
-      setMessage('');
+    if (name.trim() && message.trim() && !isSending) {
+      setIsSending(true);
+      try {
+        await addDoc(wishesRef, {
+          name: name.trim(),
+          message: message.trim(),
+          date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
+          createdAt: serverTimestamp(),
+        });
+        setName('');
+        setMessage('');
+      } catch (err) {
+        console.error('Error sending wish:', err);
+      }
+      setIsSending(false);
     }
   };
 
@@ -65,9 +94,9 @@ export default function RSVP() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Ucapan & Doa</label>
                   <textarea rows="3" value={message} onChange={(e) => setMessage(e.target.value)} required className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Tuliskan doa untuk kedua mempelai..."></textarea>
                 </div>
-                <button type="submit" className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors flex justify-center items-center gap-2 shadow-sm">
+                <button type="submit" disabled={isSending} className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors flex justify-center items-center gap-2 shadow-sm disabled:opacity-60 disabled:cursor-not-allowed">
                   <Send size={18} />
-                  Kirim Ucapan
+                  {isSending ? 'Mengirim...' : 'Kirim Ucapan'}
                 </button>
               </form>
 

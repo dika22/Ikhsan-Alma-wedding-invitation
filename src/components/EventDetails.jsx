@@ -40,9 +40,14 @@ export default function EventDetails() {
               </div>
             </div>
             
-            <button className="mt-8 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-sm text-sm tracking-wide uppercase">
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Masjid+Baitulhikmah+Gombong+Bedahan+Belik+Pemalang" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block mt-8 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-sm text-sm tracking-wide uppercase"
+            >
               View on Map
-            </button>
+            </a>
           </div>
 
           {/* Resepsi */}
@@ -57,7 +62,7 @@ export default function EventDetails() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Clock className="text-accent" size={24} />
-                <p>11:00 - 14:00 WIB</p>
+                <p>10:00 WIB - Selesai</p>
               </div>
               <div className="flex flex-col items-center gap-2 mt-4 pt-4 border-t border-gray-200">
                 <MapPin className="text-accent" size={24} />
@@ -66,9 +71,14 @@ export default function EventDetails() {
               </div>
             </div>
             
-            <button className="mt-8 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-sm text-sm tracking-wide uppercase">
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Masjid+Baitulhikmah+Gombong+Bedahan+Belik+Pemalang" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block mt-8 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-sm text-sm tracking-wide uppercase"
+            >
               View on Map
-            </button>
+            </a>
           </div>
         </div>
       </div>
