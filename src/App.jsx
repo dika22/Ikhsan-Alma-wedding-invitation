@@ -48,14 +48,13 @@ function App() {
   return (
     <main className="min-h-screen bg-light relative">
       {/* Intro Screen Overlay */}
-      <div 
-        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-transform duration-1000 ease-in-out bg-secondary ${
-          isOpened ? '-translate-y-full' : 'translate-y-0'
-        }`}
+      <div
+        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-transform duration-1000 ease-in-out bg-secondary ${isOpened ? '-translate-y-full' : 'translate-y-0'
+          }`}
       >
         {/* Floral Top Decoration */}
         <div className="absolute top-0 left-0 w-full h-48 bg-[url('/flower-top.png')] bg-contain bg-top bg-no-repeat opacity-90" />
-        
+
         {/* Floral Bottom Decoration */}
         <div className="absolute bottom-0 left-0 w-full h-48 bg-[url('/flower-bottom.png')] bg-contain bg-bottom bg-no-repeat opacity-90" />
 
@@ -63,9 +62,11 @@ function App() {
           <p className="text-gray-600 tracking-[0.3em] uppercase text-xs md:text-sm mb-6 font-semibold">
             Undangan Pernikahan
           </p>
-          
-          <h1 className="font-script text-6xl md:text-7xl text-dark mb-8 leading-tight">
-            Ikhsan & <br/> Alma
+
+          <h1 className="font-script text-6xl md:text-7xl text-dark mb-6 flex flex-col items-center leading-none">
+            <span>Ikhsan</span>
+            <span className="text-primary text-4xl md:text-5xl my-2">&amp;</span>
+            <span>Alma</span>
           </h1>
 
           {/* Countdown */}
@@ -99,7 +100,7 @@ function App() {
             <p className="text-gray-600 text-sm">di Tempat</p>
           </div>
 
-          <button 
+          <button
             onClick={() => setIsOpened(true)}
             className="px-8 py-3 bg-primary text-white rounded-full font-medium tracking-widest text-sm hover:bg-primary/85 transition-all shadow-md uppercase hover:shadow-lg hover:scale-105"
           >
@@ -116,12 +117,12 @@ function App() {
       <EventDetails />
       <RSVP />
       <MusicPlayer isOpened={isOpened} />
-      
+
       <footer className="py-12 bg-gradient-to-b from-secondary to-secondary/80 text-center border-t border-primary/20">
         <div className="w-16 h-[1px] bg-primary/40 mx-auto mb-6"></div>
         <p className="font-serif italic mb-3 text-dark/70 text-sm">Merupakan suatu kehormatan dan kebahagiaan apabila</p>
         <p className="font-serif italic mb-6 text-dark/70 text-sm">Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu</p>
-        <p className="font-script text-3xl text-primary mb-4">Ikhsan & Alma</p>
+        <p className="font-script text-3xl text-primary mb-4">Ikhsan &amp; Alma</p>
         <div className="w-16 h-[1px] bg-primary/40 mx-auto mt-6"></div>
         <p className="text-dark/40 text-xs mt-6 tracking-widest uppercase">With Love</p>
       </footer>
