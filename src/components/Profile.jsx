@@ -41,9 +41,11 @@ export default function Profile() {
           >
             <div className="relative mb-8 group cursor-pointer">
               <div className="absolute inset-0 border-2 border-primary rotate-6 rounded-t-full rounded-b-full transition-all duration-500 group-hover:rotate-12 group-hover:scale-105"></div>
-              <div className="relative z-10 w-64 h-80 bg-secondary/30 flex items-center justify-center rounded-t-full rounded-b-full shadow-lg transition-transform duration-500 group-hover:scale-105">
-                <span className="font-script text-9xl text-primary">I</span>
-              </div>
+              <img 
+                src="/groom.png" 
+                alt="Ikhsan Sandi Putra" 
+                className="relative z-10 w-64 h-80 object-cover rounded-t-full rounded-b-full shadow-lg transition-transform duration-500 group-hover:scale-105" 
+              />
             </div>
             <h3 className="font-script text-5xl md:text-6xl text-dark mb-3 tracking-wide">Ikhsan Sandi Putra</h3>
             <p className="text-gray-600 font-serif italic text-xl text-center">
@@ -70,9 +72,11 @@ export default function Profile() {
           >
             <div className="relative mb-8 group cursor-pointer">
               <div className="absolute inset-0 border-2 border-primary -rotate-6 rounded-t-full rounded-b-full transition-all duration-500 group-hover:-rotate-12 group-hover:scale-105"></div>
-              <div className="relative z-10 w-64 h-80 bg-secondary/30 flex items-center justify-center rounded-t-full rounded-b-full shadow-lg transition-transform duration-500 group-hover:scale-105">
-                <span className="font-script text-9xl text-primary">A</span>
-              </div>
+              <img 
+                src="/bride.png" 
+                alt="Alma Nur Annisa" 
+                className="relative z-10 w-64 h-80 object-cover rounded-t-full rounded-b-full shadow-lg transition-transform duration-500 group-hover:scale-105" 
+              />
             </div>
             <h3 className="font-script text-5xl md:text-6xl text-dark mb-3 tracking-wide">Alma Nur Annisa</h3>
             <p className="text-gray-600 font-serif italic text-xl text-center">
