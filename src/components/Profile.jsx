@@ -76,7 +76,7 @@ export default function Profile() {
             </div>
             <h3 className="font-script text-5xl md:text-6xl text-dark mb-3 tracking-wide">Alma Nur Annisa</h3>
             <p className="text-gray-600 font-serif italic text-xl text-center">
-              Putri Pertama dari <br /> Bapak Saritno &amp; Ibu Dasirah
+              Putri Pertama dari <br /> Bapak Suritno &amp; Ibu Dasirah
             </p>
           </div>
 

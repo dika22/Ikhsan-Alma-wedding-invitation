@@ -80,7 +80,7 @@ export default function EventDetails() {
           {/* Interactive Google Map Embed */}
           <div className="w-full h-64 md:h-96 rounded-2xl overflow-hidden border border-primary/30 shadow-md mb-8">
             <iframe
-              src="https://maps.google.com/maps?q=-7.198305,109.337582&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=-7.2095431,109.2975346&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -92,7 +92,7 @@ export default function EventDetails() {
 
           <div className="text-center">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=-7.198305,109.337582"
+              href="https://maps.app.goo.gl/jGacvudLX3r28qbPA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white rounded-full hover:bg-primary/90 transition-all shadow-md hover:shadow-lg font-medium text-sm tracking-wider uppercase hover:scale-105 cursor-pointer"
