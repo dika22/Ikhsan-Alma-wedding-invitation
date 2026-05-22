@@ -8,7 +8,7 @@ export default function EventDetails() {
   const [refMap, isMapVisible] = useScrollFade();
 
   return (
-    <section className="py-24 bg-white px-4 relative overflow-hidden">
+    <section className="py-12 md:py-24 bg-white px-4 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-script text-primary mb-4">Detail Acara</h2>

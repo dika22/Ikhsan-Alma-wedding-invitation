@@ -5,7 +5,7 @@ export default function Verse() {
   const [ref, isVisible] = useScrollFade();
 
   return (
-    <section className="pt-24 pb-10 bg-white px-4">
+    <section className="pt-12 md:pt-24 pb-6 md:pb-10 bg-white px-4">
         <div 
           ref={ref}
           className={`max-w-3xl mx-auto text-center transition-all duration-1000 ease-out transform ${

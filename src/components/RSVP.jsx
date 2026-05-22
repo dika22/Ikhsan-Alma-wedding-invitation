@@ -49,14 +49,13 @@ export default function RSVP() {
   };
 
   return (
-    <section className="py-24 bg-white px-4 relative">
+    <section className="py-12 md:py-24 bg-white px-4 relative">
       <div className="max-w-4xl mx-auto">
         {/* Doa Pengantin Block */}
-        <div 
+        <div
           ref={ref}
-          className={`mb-16 text-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-primary/20 transition-all duration-1000 ease-out transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`mb-16 text-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-primary/20 transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <h3 className="text-2xl font-serif text-dark mb-6 border-b border-primary/20 pb-2 inline-block">Doa Pengantin</h3>
           <p className="text-3xl font-arabic text-dark mb-6 leading-loose" dir="rtl" style={{ fontFamily: '"Amiri", "Scheherazade New", serif' }}>
@@ -70,10 +69,9 @@ export default function RSVP() {
           </p>
         </div>
 
-        <div 
-          className={`bg-secondary/10 p-8 md:p-12 rounded-3xl border border-primary/20 shadow-sm transition-all duration-1000 delay-300 ease-out transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+        <div
+          className={`bg-secondary/10 p-8 md:p-12 rounded-3xl border border-primary/20 shadow-sm transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <div className="text-center mb-10">
             <h2 className="text-4xl font-script text-primary mb-4">Konfirmasi Kehadiran &amp; Kado</h2>
@@ -121,8 +119,8 @@ export default function RSVP() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih dapat melalui virtual account atau e-wallet di bawah ini:
               </p>
-              
-              <button 
+
+              <button
                 onClick={() => setShowGift(!showGift)}
                 className="w-full border-2 border-primary text-primary py-3 rounded-lg hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 font-medium"
               >
@@ -137,10 +135,15 @@ export default function RSVP() {
                     <p className="text-2xl tracking-widest text-primary my-2 font-mono">7105232659</p>
                     <p className="text-sm text-gray-500">a.n Ikhsan Sandi Putra</p>
                   </div>
-                   <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                  <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
                     <p className="font-bold text-gray-800 text-lg">BRI</p>
                     <p className="text-2xl tracking-widest text-primary my-2 font-mono">5979 0104 0123 533</p>
                     <p className="text-sm text-gray-500">a.n Alma Nur Annisa</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <p className="font-bold text-gray-800 text-lg">DANA</p>
+                    <p className="text-2xl tracking-widest text-primary my-2 font-mono">0812-8336-0018</p>
+                    <p className="text-sm text-gray-500">a.n Ikhsan Sandi Putra</p>
                   </div>
                 </div>
               )}

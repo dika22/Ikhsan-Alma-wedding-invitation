@@ -49,17 +49,26 @@ function App() {
     <main className="min-h-screen bg-light relative">
       {/* Intro Screen Overlay */}
       <div
-        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-transform duration-1000 ease-in-out bg-secondary ${isOpened ? '-translate-y-full' : 'translate-y-0'
-          }`}
+        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out bg-gradient-to-tr from-[#fcfbf9] via-[#f3e5f5]/30 to-[#faf7f2] ${
+          isOpened ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
+        }`}
       >
         {/* Floral Top Decoration */}
-        <div className="absolute top-0 left-0 w-full h-48 bg-[url('/flower-top.png')] bg-contain bg-top bg-no-repeat opacity-90" />
+        <div className="absolute top-0 left-0 w-full h-48 bg-[url('/flower-top.png')] bg-contain bg-top bg-no-repeat opacity-80" />
 
         {/* Floral Bottom Decoration */}
-        <div className="absolute bottom-0 left-0 w-full h-48 bg-[url('/flower-bottom.png')] bg-contain bg-bottom bg-no-repeat opacity-90" />
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-[url('/flower-bottom.png')] bg-contain bg-bottom bg-no-repeat opacity-80" />
 
-        <div className="relative z-10 text-center px-6 w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-1000 flex flex-col items-center">
-          <p className="text-gray-600 tracking-[0.3em] uppercase text-xs md:text-sm mb-6 font-semibold">
+        {/* Rotating Geometric Ring Frame */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <div className="w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full border border-primary/10 absolute animate-spin-slow"></div>
+          <div className="w-[335px] h-[335px] md:w-[418px] md:h-[418px] rounded-full border border-dashed border-primary/20 absolute animate-reverse-spin-slow"></div>
+          <div className="absolute w-[290px] h-[290px] md:w-[370px] md:h-[370px] rounded-full border border-primary/5"></div>
+        </div>
+
+        {/* Content Box with glassmorphism */}
+        <div className="relative z-10 text-center px-8 py-10 w-full max-w-[390px] md:max-w-[420px] animate-in fade-in slide-in-from-bottom-8 duration-1000 flex flex-col items-center bg-white/30 backdrop-blur-md rounded-[2.5rem] border border-white/50 shadow-2xl shadow-primary/5">
+          <p className="text-gray-600 tracking-[0.3em] uppercase text-xs md:text-sm mb-6 font-semibold animate-pulse">
             Undangan Pernikahan
           </p>
 
@@ -71,19 +80,19 @@ function App() {
 
           {/* Countdown */}
           <div className="flex gap-3 mb-6">
-            <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
+            <div className="bg-white/70 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/20">
               <p className="text-xl font-bold text-dark">{timeLeft.hari}</p>
               <p className="text-xs text-gray-600 mt-1">Hari</p>
             </div>
-            <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
+            <div className="bg-white/70 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/20">
               <p className="text-xl font-bold text-dark">{timeLeft.jam}</p>
               <p className="text-xs text-gray-600 mt-1">Jam</p>
             </div>
-            <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
+            <div className="bg-white/70 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/20">
               <p className="text-xl font-bold text-dark">{timeLeft.menit}</p>
               <p className="text-xs text-gray-600 mt-1">Menit</p>
             </div>
-            <div className="bg-white/60 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/30">
+            <div className="bg-white/70 px-3 py-2 rounded shadow-sm text-center min-w-[60px] border border-primary/20">
               <p className="text-xl font-bold text-dark">{timeLeft.detik}</p>
               <p className="text-xs text-gray-600 mt-1">Detik</p>
             </div>
@@ -94,7 +103,7 @@ function App() {
           </p>
 
           {/* Recipient Box */}
-          <div className="bg-white/60 p-6 rounded-lg mb-8 w-full backdrop-blur-sm border border-primary/30 shadow-sm">
+          <div className="bg-white/75 p-6 rounded-2xl mb-8 w-full backdrop-blur-sm border border-primary/20 shadow-sm">
             <p className="text-gray-700 font-serif mb-2 text-sm">Kepada Yth. Bapak/Ibu/Sdr/i</p>
             <p className="font-bold text-xl text-dark mb-1 font-serif">Tamu Undangan</p>
             <p className="text-gray-600 text-sm">di Tempat</p>
@@ -102,7 +111,7 @@ function App() {
 
           <button
             onClick={() => setIsOpened(true)}
-            className="px-8 py-3 bg-primary text-white rounded-full font-medium tracking-widest text-sm hover:bg-primary/85 transition-all shadow-md uppercase hover:shadow-lg hover:scale-105"
+            className="px-8 py-3 bg-primary text-white rounded-full font-medium tracking-widest text-sm hover:bg-primary/85 transition-all shadow-md uppercase hover:shadow-lg hover:scale-105 cursor-pointer"
           >
             Buka Undangan
           </button>

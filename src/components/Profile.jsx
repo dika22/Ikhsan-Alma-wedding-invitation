@@ -8,7 +8,7 @@ export default function Profile() {
   const [refBride, isBrideVisible] = useScrollFade();
 
   return (
-    <section className="pt-10 pb-24 bg-white px-4 relative overflow-hidden">
+    <section className="pt-6 pb-12 md:pb-24 bg-white px-4 relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Intro Text */}

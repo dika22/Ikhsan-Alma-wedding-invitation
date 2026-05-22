@@ -5,7 +5,7 @@ export default function Story() {
   const [ref, isVisible] = useScrollFade();
 
   return (
-    <section className="py-24 bg-secondary/30 px-4 relative">
+    <section className="py-12 md:py-24 bg-secondary/30 px-4 relative">
       <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent" />
       <div className="max-w-4xl mx-auto">
