@@ -4,7 +4,7 @@ import { useScrollFade } from '../hooks/useScrollFade';
 import { db } from '../lib/firebase';
 import { collection, addDoc, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
 
-const wishesRef = collection(db, 'wishes');
+const wishesRef = collection(db, 'wedding-wishes');
 
 export default function RSVP() {
   const [ref, isVisible] = useScrollFade();
@@ -34,8 +34,8 @@ export default function RSVP() {
       setIsSending(true);
       try {
         await addDoc(wishesRef, {
-          name: name.trim(),
-          message: message.trim(),
+          nama: name.trim(),
+          wishes: message.trim(),
           date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
           createdAt: serverTimestamp(),
         });
@@ -104,9 +104,9 @@ export default function RSVP() {
                   {messages.map((msg, idx) => (
                     <div key={idx} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-bold text-dark">{msg.name}</h4>
+                        <h4 className="font-bold text-dark">{msg.nama}</h4>
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">{msg.message}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed">{msg.wishes}</p>
                     </div>
                   ))}
                 </div>
